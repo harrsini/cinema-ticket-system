@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-cinema-bg text-cinema-text font-sans;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-cinema-card;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-cinema-border rounded-full;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-cinema-accent hover:bg-red-700 text-white font-medium px-4 py-2 rounded-lg transition-all duration-200 active:scale-95;
+  }
+
+  .btn-ghost {
+    @apply border border-cinema-border hover:border-cinema-accent text-cinema-text hover:text-cinema-accent font-medium px-4 py-2 rounded-lg transition-all duration-200 active:scale-95;
+  }
+
+  .card {
+    @apply bg-cinema-card border border-cinema-border rounded-xl p-4;
+  }
+}
